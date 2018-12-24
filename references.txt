@@ -1,0 +1,27 @@
+react-native init AwesomeProject
+cd AwesomeProject
+react-native run-android
+react-native start
+npm install react-navigation
+
+References:
+
+React Course
+https://station.rocketseat.com.br/courses/starter/2b9c4d13-e243-4cbe-9fa2-545ca6dce1b3#0/0
+https://github.com/Rocketseat/ambiente-react-native
+
+Falha ao carregar react-navigation
+Instalações do NPM
+https://stackoverflow.com/questions/52861437/undefined-is-not-an-object-evaluating-rngesturehandlermodule-state
+
+React-Navigation v3 precisa estar em um container
+https://stackoverflow.com/questions/53367195/invariant-violation-the-navigation-prop-is-missing-for-this-navigator
+
+Arrow async
+https://stackoverflow.com/questions/42964102/syntax-for-async-arrow-function
+
+Config Debug
+https://stackoverflow.com/questions/40898934/unable-to-connect-with-remote-debugger
+
+Destruct objects
+https://stackoverflow.com/questions/47283995/object-destructing-inside-constructor-in-nodejs-to-assign-values-to-member-varia
