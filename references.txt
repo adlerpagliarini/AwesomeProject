@@ -25,3 +25,19 @@ https://stackoverflow.com/questions/40898934/unable-to-connect-with-remote-debug
 
 Destruct objects
 https://stackoverflow.com/questions/47283995/object-destructing-inside-constructor-in-nodejs-to-assign-values-to-member-varia
+
+Exposing IIS
+https://blog.kloud.com.au/2017/02/27/remote-access-to-local-aspnet-core-apps-from-mobile-devices/
+
+Axios interceptors
+https://stackoverflow.com/questions/43051291/attach-authorization-header-for-all-axios-requests
+https://www.sitepoint.com/axios-beginner-guide/
+
+Bind TextInput
+https://stackoverflow.com/questions/32913338/react-native-get-textinput-value
+https://stackoverflow.com/questions/46217760/how-to-multiple-textinput-handle-with-single-handler
+
+Navigation
+https://hackernoon.com/how-to-use-a-custom-header-and-custom-bottom-tab-bar-for-react-native-with-react-navigation-969a5d3cabb1
+https://github.com/react-navigation/react-navigation/issues/570
+http://www.albertgao.xyz/2018/06/04/render-screen-or-tab-only-when-it-has-been-displayed-in-react-navigation-v2/

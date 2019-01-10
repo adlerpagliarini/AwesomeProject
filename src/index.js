@@ -1,7 +1,8 @@
 import React from 'react';
-import StackNavigation from './routes';
-import './config/StatusBarConfig';
+import DrawerNavigation from './routes/DrawerNavigation';
+import TabNavigation from './routes/TabNavigation';
+import './photos/config/StatusBarConfig';
 
-const App = () => <StackNavigation/>;
+const App = () => <DrawerNavigation/>;
 
 export default App;

@@ -3,10 +3,11 @@ import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native
 import photoService from '../services/photoService';
 import PageInfo from '../model/pageInfo';
 import PhotoList from '../model/PhotoList';
+import ButtonLink from './shared/buttonLink';
 
-export default class Main extends Component {
+export default class Photos extends Component {
     static navigationOptions = {
-        title: 'React Native - Photos'
+        title: 'Get Started - Photo List'
     };
 
     state = {
@@ -18,15 +19,15 @@ export default class Main extends Component {
     };
 
     async componentDidMount(){
-        console.log(this.state);
+        console.log('Photos DidMount', this.state, this.props);
         const { photos: photosOnMemory, pagesInfo } = await this.loadPhotosFromApi();        
         this.setState({photosOnMemory, pagesInfo});
         this.loadPhotosOnStateAndRender();
-        console.log(this.state);
+        console.log('Photos DidMount', this.state, this.props);
     }
 
     loadPhotosFromApi = async () => {
-        return await photoService.GetPhotos();
+        return await photoService.GetPhotosOffline();
     };
 
     loadPhotosOnStateAndRender = (page = 1) => {
@@ -55,6 +56,7 @@ export default class Main extends Component {
                 <Text style={styles.photoTitle}>
                     {item.id} - {item.title}
                 </Text>
+                <ButtonLink props={{linkTo: 'PhotoDetails', linkToParams: { photo: item }, linkText: 'Load Component', navigation: this.props.navigation}} />
                 <TouchableOpacity style={styles.photoButton} onPress={() => {
                         this.props.navigation.navigate("PhotoDetails", { photo: item })
                     }}>
@@ -98,14 +100,15 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         fontWeight: "bold"
     },
-    photoList:{ padding:20 },
+    photoList:{ padding:20, backgroundColor: '#ccc', borderRadius: 5 },
     photoContainer:{
         backgroundColor:'#fff',
         borderWidth: 1,
         borderColor: '#ddd',
         borderRadius: 5,
         padding: 20,
-        marginBottom: 20
+        marginBottom: 20,
+        width: 300
     },
     photoTitle:{
         fontSize: 14,
@@ -120,7 +123,8 @@ const styles = StyleSheet.create({
         backgroundColor: "transparent",
         justifyContent: "center",
         alignItems: "center",
-        marginTop:10
+        marginTop:10,
+        padding:10
     },
     photoButtonText:{
         fontSize: 16,
